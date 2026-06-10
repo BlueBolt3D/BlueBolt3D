@@ -1,0 +1,438 @@
+/* Color Palette & Custom Variables derived from logo image "Untitled presentation (1).png" */
+:root {
+    --primary-electric: #0091da; /* The vibrant lightning bolt blue */
+    --primary-darkblue: #0056b3; /* The solid text royal blue */
+    --bg-dark: #0b0f19;          /* Deep industrial dark mode foundation */
+    --bg-card: #151c2c;          /* Slightly lighter dark for structural contrast */
+    --text-main: #f3f4f6;        /* Crisp light gray text */
+    --text-muted: #9ca3af;       /* Secondary details text */
+    --accent-light: #e0f2fe;     /* Soft tinted blue for light alternate sections */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(11, 15, 25, 0.95);
+    border-bottom: 1px solid rgba(0, 145, 218, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    height: 145px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    /* Adjust the pixel value below to nudge the logo up (negative) or down (positive) */
+    transform: translateY(15px);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-electric);
+}
+
+/* Hero Section */
+.hero {
+    padding: 10rem 2rem 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #0b0f19 0%, #002b5c 100%);
+    border-bottom: 2px solid var(--primary-electric);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    color: var(--text-muted);
+}
+
+/* Main Design System Layouts */
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    max-width: 750px;
+    margin: 1.5rem auto 3rem auto;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.bg-light {
+    background-color: var(--bg-card);
+    max-width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bg-light .section-container {
+    padding: 6rem 2rem;
+}
+
+/* Grid Framework */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* Cards & Portfolio Items */
+.card {
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-electric);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 7px 7px 0 0;
+    display: block;
+}
+
+.card-content {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-electric);
+}
+
+.spec-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 4px 10px;
+    background-color: rgba(0, 145, 218, 0.08); /* Subtle electric blue tint */
+    border: 1px solid rgba(0, 145, 218, 0.3);
+    border-radius: 4px;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--accent-light);
+}
+
+.portfolio-item {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+
+/* Portfolio Image Styling */
+.portfolio-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Individual Portfolio Image Nudging */
+#portfolio-img-1 {
+    /* Adjust X (left/right) and Y (up/down). Use scale to zoom slightly if moving it reveals gaps at the edges */
+    transform: translate(0px, 105px) scale(2);
+}
+
+#portfolio-img-2 {
+    transform: translate(0px, 0px) scale(1);
+}
+
+#portfolio-img-3 {
+    transform: translate(0px, 0px) scale(1);
+}
+
+.portfolio-caption {
+    padding: 1.5rem;
+}
+
+.portfolio-caption h4 {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.portfolio-caption p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* UI Elements & Buttons */
+.btn-primary {
+    background-color: var(--primary-electric);
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-darkblue);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.text-link {
+    color: var(--primary-electric);
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* General Inquiry Banner */
+.general-inquiry-box {
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(0, 145, 218, 0.05);
+    border: 1px solid rgba(0, 145, 218, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Form Styles */
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--bg-dark);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input[type="file"] {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-electric);
+}
+
+/* Form Layout Elements */
+.form-section-header {
+    margin: 2rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-section-header h4 {
+    color: var(--primary-electric);
+    font-size: 1.1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--primary-electric);
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* Dynamic Model Entry Styles */
+.model-entry {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.model-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+.model-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-electric);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    border: 1px dashed var(--primary-electric);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 145, 218, 0.1);
+}
+
+.btn-remove {
+    background-color: transparent;
+    color: #ef4444; /* Subtle red for removal */
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-remove:hover {
+    text-decoration: underline;
+}
+
+.submit-btn-wrapper {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Keeps navbar clean on small mobile devices */
+    .hero h1 { font-size: 2.2rem; }
+    .contact-form { padding: 1.5rem; }
+    .model-options-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

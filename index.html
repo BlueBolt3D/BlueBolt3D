@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Bolt 3D | Rapid 3D Printing & Manufacturing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="assets/logo.png" alt="Blue Bolt 3D Logo" class="nav-logo">
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Request a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title"></h1>
+            <p id="hero-subtitle"></p>
+            <a href="#contact" class="btn-primary">Start Your Project</a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-container">
+        <h2 id="about-title"></h2>
+        <p id="about-description" class="section-subtitle"></p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-container bg-light">
+        <h2 id="services-title"></h2>
+        <div class="grid-3">
+            <div class="card">
+                <img src="assets/images/FDM.png" alt="Industrial FDM 3D printing equipment" class="card-img">
+                <div class="card-content">
+                    <h3 id="cap-1-title"></h3>
+                    <p id="cap-1-desc"></p>
+                    <div class="spec-badge" id="cap-1-spec"></div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/SLA.png" alt="Resin based SLA 3D printing equipment" class="card-img">
+                <div class="card-content">
+                    <h3 id="cap-2-title"></h3>
+                    <p id="cap-2-desc"></p>
+                    <div class="spec-badge" id="cap-2-spec"></div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/Slicer.png" alt="3D model slicing software interface" class="card-img">
+                <div class="card-content">
+                    <h3 id="cap-3-title"></h3>
+                    <p id="cap-3-desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Portfolio Section -->
+    <section id="portfolio" class="section-container">
+        <h2 id="portfolio-title"></h2>
+        <div class="grid-3">
+            <!-- Project 1 -->
+            <div class="portfolio-item">
+                <img src="assets/images/project1.png" alt="High-infill 3D printed functional mechanical prototype" class="portfolio-image" id="portfolio-img-1">
+                <div class="portfolio-caption">
+                    <h4 id="port-1-title"></h4>
+                    <p id="port-1-desc"></p>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="portfolio-item">
+                <img src="assets/images/project2.png" alt="Custom 3D printed production tooling, jigs, and fixtures" class="portfolio-image" id="portfolio-img-2">
+                <div class="portfolio-caption">
+                    <h4 id="port-2-title"></h4>
+                    <p id="port-2-desc"></p>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="portfolio-item">
+                <img src="assets/images/project3.png" alt="Complex geometric 3D printed display model showing crisp overhangs" class="portfolio-image" id="portfolio-img-3">
+                <div class="portfolio-caption">
+                    <h4 id="port-3-title"></h4>
+                    <p id="port-3-desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Intake Section -->
+    <section id="contact" class="section-container bg-light">
+        <h2 id="contact-title"></h2>
+        <div class="general-inquiry-box">
+            <p id="general-inquiry-desc"></p>
+        </div>
+        
+        <!-- Replace the action URL with your Formspree/Web3Forms endpoint later -->
+        <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data" class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="deadline">Required Deadline</label>
+                <input type="date" id="deadline" name="deadline" required>
+            </div>
+
+            <!-- Delivery & Billing Details -->
+            <div class="form-section-header">
+                <h4>Delivery & Billing Details</h4>
+            </div>
+
+            <div class="form-group">
+                <label for="shipping_company">Company Name (Optional)</label>
+                <input type="text" id="shipping_company" name="shipping_company" placeholder="e.g. Acme Corp">
+            </div>
+
+            <div class="form-group">
+                <label for="shipping_street">Street Address</label>
+                <input type="text" id="shipping_street" name="shipping_street" required placeholder="123 Innovation Way">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="shipping_city">City</label>
+                    <input type="text" id="shipping_city" name="shipping_city" required placeholder="e.g. Seattle">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="shipping_state">State</label>
+                        <input type="text" id="shipping_state" name="shipping_state" required placeholder="WA">
+                    </div>
+                    <div class="form-group">
+                        <label for="shipping_zip">ZIP Code</label>
+                        <input type="text" id="shipping_zip" name="shipping_zip" required placeholder="98101">
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="same-address" name="same_address" checked>
+                <label for="same-address">Billing address is the same as shipping</label>
+            </div>
+
+            <div id="billing-container" style="display: none;">
+                <div class="form-group">
+                    <label for="billing_company">Billing Company Name (Optional)</label>
+                    <input type="text" id="billing_company" name="billing_company" placeholder="e.g. Acme Corp">
+                </div>
+
+                <div class="form-group">
+                    <label for="billing_street">Billing Street Address</label>
+                    <input type="text" id="billing_street" name="billing_street" placeholder="123 Innovation Way">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="billing_city">Billing City</label>
+                        <input type="text" id="billing_city" name="billing_city" placeholder="e.g. Seattle">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="billing_state">State</label>
+                            <input type="text" id="billing_state" name="billing_state" placeholder="WA">
+                        </div>
+                        <div class="form-group">
+                            <label for="billing_zip">ZIP Code</label>
+                            <input type="text" id="billing_zip" name="billing_zip" placeholder="98101">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="models-container">
+                <div class="model-entry" id="model-entry-1">
+                    <div class="model-entry-header">
+                        <h4>Model 1</h4>
+                    </div>
+                    <div class="form-group">
+                        <label for="file_1">Upload 3D Model / File (.STL, .STEP, .ZIP)</label>
+                        <input type="file" id="file_1" name="file_1" accept=".stl,.step,.stp,.zip,.obj" required>
+                    </div>
+                    <div class="model-options-grid">
+                        <div class="form-group">
+                            <label for="quantity_1">Quantity</label>
+                            <input type="number" id="quantity_1" name="quantity_1" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="color_1">Preferred Color / Material</label>
+                            <input type="text" id="color_1" name="color_1" placeholder="e.g. Black PLA, Clear Resin" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="add-model-btn" class="btn-secondary">+ Add Another Model</button>
+
+            <div class="form-group">
+                <label for="message">Project Requirements & Specifications</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Describe your material preferences, infill requirements, or general project scope..."></textarea>
+            </div>
+
+            <div class="submit-btn-wrapper">
+                <button type="submit" class="btn-primary">Submit Specifications</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Blue Bolt 3D. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addBtn = document.getElementById('add-model-btn');
+            const container = document.getElementById('models-container');
+            let modelCount = 1;
+
+            // Billing address toggle logic
+            const sameAddressCheckbox = document.getElementById('same-address');
+            const billingContainer = document.getElementById('billing-container');
+            const billingInputs = billingContainer.querySelectorAll('input[type="text"]');
+
+            sameAddressCheckbox.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    billingContainer.style.display = 'none';
+                    billingInputs.forEach(input => input.required = false);
+                } else {
+                    billingContainer.style.display = 'block';
+                    billingInputs.forEach(input => {
+                        if (input.name !== 'billing_company') {
+                            input.required = true;
+                        }
+                    });
+                }
+            });
+
+            addBtn.addEventListener('click', () => {
+                modelCount++;
+                
+                const entryDiv = document.createElement('div');
+                entryDiv.className = 'model-entry';
+                entryDiv.id = `model-entry-${modelCount}`;
+                
+                entryDiv.innerHTML = `
+                    <div class="model-entry-header">
+                        <h4>Model ${modelCount}</h4>
+                        <button type="button" class="btn-remove" onclick="this.closest('.model-entry').remove()">Remove</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="file_${modelCount}">Upload 3D Model / File (.STL, .STEP, .ZIP)</label>
+                        <input type="file" id="file_${modelCount}" name="file_${modelCount}" accept=".stl,.step,.stp,.zip,.obj" required>
+                    </div>
+                    <div class="model-options-grid">
+                        <div class="form-group">
+                            <label for="quantity_${modelCount}">Quantity</label>
+                            <input type="number" id="quantity_${modelCount}" name="quantity_${modelCount}" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="color_${modelCount}">Preferred Color / Material</label>
+                            <input type="text" id="color_${modelCount}" name="color_${modelCount}" placeholder="e.g. Black PLA, Clear Resin" required>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(entryDiv);
+            });
+
+            // Load external content dynamically
+            fetch('content.json')
+                .then(response => response.json())
+                .then(data => {
+                    for (const key in data) {
+                        const element = document.getElementById(key);
+                        if (element) {
+                            element.innerHTML = data[key];
+                        }
+                    }
+                })
+                .catch(error => console.error('Error fetching content.json:', error));
+        });
+    </script>
+</body>
+</html>
