@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Bolt 3D | Rapid 3D Printing & Manufacturing</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" charset="utf-8"></script>
+    <script>UPLOADCARE_PUBLIC_KEY = '1aa2c4d92aa251647257';</script>
 </head>
 <body>
 
@@ -194,7 +196,7 @@
                     </div>
                     <div class="form-group">
                         <label for="file_1">Upload 3D Model / File (.STL, .STEP, .ZIP)</label>
-                        <input type="file" id="file_1" name="file_1" accept=".stl,.step,.stp,.zip,.obj" required>
+                        <input type="hidden" role="uploadcare-uploader" name="model_file_link[]" data-images-only="false" />
                     </div>
                     <div class="model-options-grid">
                         <div class="form-group">
@@ -266,7 +268,7 @@
                     </div>
                     <div class="form-group">
                         <label for="file_${modelCount}">Upload 3D Model / File (.STL, .STEP, .ZIP)</label>
-                        <input type="file" id="file_${modelCount}" name="file_${modelCount}" accept=".stl,.step,.stp,.zip,.obj" required>
+                        <input type="hidden" role="uploadcare-uploader" name="model_file_link[]" data-images-only="false" />
                     </div>
                     <div class="model-options-grid">
                         <div class="form-group">
