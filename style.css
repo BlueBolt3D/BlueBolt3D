@@ -204,6 +204,7 @@ body {
 .portfolio-caption h4 {
     margin-bottom: 0.5rem;
     color: white;
+    text-align: center;
 }
 
 .portfolio-caption p {

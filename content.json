@@ -15,10 +15,10 @@
   "portfolio-title": "Recent Projects & Prints",
   "port-1-title": "Functional Mechanical Prototypes",
   "port-1-desc": "Printed as a hollow shell to visually verify fluid fill levels and test mechanical fitment.",
-  "port-2-title": "Custom Production Tooling",
-  "port-2-desc": "Jigs and fixtures engineered to optimize workshop efficiency and precision assembly work.",
-  "port-3-title": "Complex Geometric Display",
-  "port-3-desc": "Showcasing clean bridging, crisp overhangs, and exceptional dimensional accuracy.",
+  "port-2-title": "High-Precision Complex Geometry",
+  "port-2-desc": "Engineered for exceptional layer consistency and surface finish. Captures ultra-fine textures, sharp organic details, and flawless overhang transitions.",
+  "port-3-title": "Precision Texture Mapping",
+  "port-3-desc": "Printed with uniform geometric precision to visually map detailed surface cratering and verify internal shell light transmission.",
   "contact-title": "Request a Quote",
   "general-inquiry-desc": "Just have a quick question or custom request? You don't need to fill out the full form—feel free to drop us a line directly at <a href=\"mailto:bluebolt3d@gmail.com\" class=\"text-link\">bluebolt3d@gmail.com</a>."
 }
